@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Come on and Live a little!</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3_data.js"></script>
+    <script type="text/javascript" src="./coinFlipAbi.js"></script>
+    <script type="text/javascript" src="./appCoinFlip.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+      .container {
+        margin-top: 0px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 10px;
+      }
+
+      th {
+        padding: 5px 10px;
+      }
+
+      .nav {
+        background-color: #1a1a1a;
+        width: 100%;
+        height: 100%;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+      }
+
+      div {
+        padding: 0px;
+        margin: 0px;
+        float: none;
+      }
+
+      button {
+        margin: 0px 15px 0px 15px;
+      }
+
+      .r-bet {
+        vertical-align: top;
+      }
+
+      .jumbotron{
+        background-color: #ffff66;
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+      }
+
+      img {
+        height: 400px;
+        width: 400px;
+        padding-bottom: 20px;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Coin Flip Gamble</h1>
+        <p class="lead">Tired of the daily work routine, saving, and investing? End all of that and get rich today!</p>
+        <p>Current pot: <span id="pot">0</span> Ether</p>
+        <p>Player Balance: <span id="balance">0</span> Ether</p>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="container">
+        <table>
+          <th><a href="./coinFlip.html">Game Section</a></th>
+          <th><a href="./coinFlipAdmin.html">Administration</a></th>
+        </table>
+      </div>
+    </div>
+
+    <div class="container">
+      <div>
+        <h2>Enter your bet</h2>
+        <div class="input-group mb-3">
+          <table>
+            <tr>
+              <th><input class="r-bet" type="radio" id="0.1-bet" name="bet" value="0.1"></th>
+              <th><label id="bet" for="0.1-bet">0.1 ETH</label></th>
+              <th><input class="r-bet" type="radio" id="0.2-bet" name="bet" value="0.2"></th>
+              <th><label id="bet" for="0.2-bet">0.2 ETH</label></th>
+              <th><input class="r-bet" type="radio" id="0.5-bet" name="bet" value="0.5"></th>
+              <th><label id="bet" for="0.5-bet">0.5 ETH</label></th>
+              <th><input class="r-bet" type="radio" id="1.0-bet" name="bet" value="1.0"></th>
+              <th><label id="bet" for="1.0-bet">1.0 ETH</label></th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <img src="../Assets/ethereum-coin.png", alt="Ethereum Coin">
+      </div>
+      <div>
+        <span id="message">Good Luck!</span>
+      </div>
+
+      <div>
+      <button type="button" id="place-bet" class="btn btn-primary">Place Bet</button>
+      <button type="button" id="flip-coin" class="btn btn-primary">Flip that Coin!</button>
+      <button type="button" id="pay-out" class="btn btn-primary">Withdraw</button>
+      </div>
+    </div>
+
+  </body>
+</html>
