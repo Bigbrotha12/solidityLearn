@@ -21,7 +21,7 @@ contract coinFlip is Ownable, usingProvable {
       *  Balance to be added to be determined by transaction value.
       *  Updated balance will be shown to user in browser.
      **/
-    function placeBet() public payable {
+    function PlaceBet() public payable {
       require(msg.value >= 0.1 ether);
       require(!awaitingQuery[msg.sender]);
       playerBalance[msg.sender] += msg.value;
